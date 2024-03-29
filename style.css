@@ -1,0 +1,822 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* header開始 */
+nav {
+  display: none;
+}
+
+#main-header {
+  height: 900px;
+  width: 100%;
+  background-color: #EEE;
+  color: white;
+}
+
+.img-wrap {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  border-bottom-left-radius: 300% 20%;
+  border-bottom-right-radius: 300% 20%;
+}
+.img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+#header-content {
+  width: 100%;
+  height: 800px;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header-icon {
+  position: absolute;
+  top: 55px;
+  left: 100px;
+  font-family: "Helvetica Neue";
+  width: 266px;
+  height: 72px;
+}
+#header-icon:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.header-list {
+  list-style: none;
+  position: absolute;
+  right: 90px;
+  top: 60px;
+}
+
+.header-list-item {
+  font-size: 13px;
+  font-family: "Gill Sans Std Book";
+  float: left;
+  padding: 25px;
+}
+.header-list-item:hover {
+  border-bottom: solid;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+#chevron-down {
+  margin-left: 650px;
+  position: relative;
+  top: -70px;
+}
+
+/* header終了 */
+/* top-wrapper開始 */
+#top-wrapper {
+  background-color: #EEE;
+  height: 900px;
+  padding-bottom: 70px;
+}
+
+.top-container {
+  width: 28%;
+  height: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding-bottom: 70px;
+}
+.top-container h1 {
+  font-size: 43px;
+  font-weight: normal;
+  font-family: "Helvetica Neue";
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.txt {
+  text-align: left;
+  line-height: 25px;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+}
+
+.txt-except img {
+  text-align: center;
+  width: 60%;
+  height: 100px;
+  padding: 25px;
+}
+
+/* top-wrapper終了 */
+/* product開始 */
+#product-wrapper {
+  height: 1350px;
+}
+
+.product-container {
+  height: 1350px;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.title h1 {
+  font-weight: normal;
+  font-family: "Gill Sans Std Book";
+  font-size: 28px;
+  background-image: url(../img/border-wave.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 80px 10px;
+  letter-spacing: 1px;
+}
+
+.product {
+  padding-bottom: 30px;
+}
+.product:hover {
+  opacity: 0.7;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.product img {
+  box-shadow: 10px 5px 5px silver;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.product h2 {
+  font-size: 20px;
+  width: 241px;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+#products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.btn-2 {
+  display: none;
+}
+
+/* product_@media開始 */
+@media screen and (max-width: 900px) {
+  .product img {
+    width: 220px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 780px) {
+  #product-wrapper {
+    width: 100%;
+    height: 2250px;
+  }
+  .product-container {
+    width: 90%;
+    height: 2250px;
+  }
+  #products {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  .product {
+    display: flex;
+    flex-flow: row;
+  }
+  .product h2 {
+    width: 400px;
+    padding-left: 40px;
+    font-size: 20px;
+  }
+  .product img {
+    width: 220px;
+    height: 290px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .product img {
+    width: 158px;
+    height: 212px;
+  }
+  #product-wrapper {
+    width: 100%;
+    height: 1800px;
+  }
+  .product-container {
+    width: 90%;
+    height: 1800px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn-2 {
+    display: block;
+    text-align: center;
+  }
+  .btn-2 .more-2 {
+    height: 47px;
+    width: 160px;
+    background-color: transparent;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: "Gill Sans Std Book";
+    border: 1px solid #13191b;
+    background-size: 8px 12px;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    text-align: center;
+  }
+  .btn-2 .more-2:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btn-2 .more-2:hover .fa-solid {
+    color: white;
+    transition: all 0.3s;
+  }
+  .more {
+    display: none;
+  }
+  .title {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  .title h1 {
+    height: 60px;
+    background-size: 90px 10px;
+    background-position: 45% 100%;
+    letter-spacing: 3px;
+  }
+  #product-wrapper {
+    width: 100%;
+    height: 3950px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .product-container {
+    width: 90%;
+    height: 3950px;
+  }
+  .product {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .product img {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    left: 40px;
+    text-align: center;
+  }
+  .product h2 {
+    font-size: 18px;
+    width: 100%;
+    padding: 30px 0 0 10px;
+    text-align: center;
+    position: relative;
+    left: -15px;
+  }
+}
+.articles {
+  background-color: #EEE;
+  height: 1000px;
+  display: flex;
+  margin-top: 180px;
+  justify-content: center;
+}
+
+.article {
+  background-color: #EEE;
+  height: 750px;
+  width: 100%;
+  font-family: "メイリオ";
+}
+.article p {
+  margin-bottom: 30px;
+}
+
+/* product_@media終了 */
+/* product終了 */
+/* news開始 */
+#news-wrapper {
+  background-color: #EEE;
+  height: 2100px;
+}
+
+.news-container {
+  width: 800px;
+  height: 2100px;
+  margin: 0 auto;
+}
+
+.btn img {
+  width: 8px;
+  height: 12px;
+  position: relative;
+  right: 30px;
+  top: 1px;
+}
+
+.fa-solid {
+  position: relative;
+  left: 38px;
+}
+
+.more {
+  height: 47px;
+  width: 160px;
+  background-color: transparent;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: "Gill Sans Std Book";
+  border: 1px solid #13191b;
+  text-align: center;
+}
+.more:hover {
+  color: white;
+  background-color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.more:hover .fa-solid {
+  color: white;
+  transition: all 0.3s;
+}
+
+.txt-small {
+  color: #656c6e;
+}
+
+.news-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-set {
+  display: flex;
+  height: 180px;
+  margin-top: 30px;
+  margin-bottom: 125px;
+}
+
+.news-set:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+.news-txt {
+  height: 200px;
+  margin: 10px;
+  font-family: "メイリオ";
+}
+.news-txt h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.news-txt p {
+  font-size: 13px;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+/* news_@media開始 */
+@media screen and (max-width: 780px) {
+  #news-wrapper {
+    width: 100%;
+  }
+  .news-container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #news-wrapper {
+    height: 1900px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .news-icon {
+    width: 220px;
+    height: 122px;
+    position: relative;
+    top: 15px;
+  }
+  .news-container {
+    height: 1950px;
+  }
+  #news-wrapper {
+    height: 1950px;
+  }
+  .section {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .news-container {
+    height: 2530px;
+    width: 85%;
+  }
+  #news-wrapper {
+    height: 2530px;
+  }
+  .content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0 20px 0px;
+  }
+  .content img {
+    width: 100%;
+    height: 240px;
+    text-align: center;
+  }
+  .content .section {
+    display: none;
+  }
+  .content .txt-content {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    right: 13px;
+  }
+}
+.news p {
+  margin-bottom: 20px;
+}
+
+/* single-news.php終了 */
+/* news終了 */
+/* share-wrapper開始 */
+#share-wrapper {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+#up-arrow {
+  display: flex;
+  justify-content: center;
+  background-color: #EEE;
+}
+#up-arrow img {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 24px;
+  transition: all 0.4s;
+}
+#up-arrow img:hover {
+  position: relative;
+  top: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.share-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#facebook {
+  color: #4871a9;
+  border: 1px solid #4871a9;
+  background-color: white;
+  padding: 15px 25px 15px 25px;
+  letter-spacing: 0.05em;
+  margin-left: 35px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  font-size: 13px;
+}
+#facebook:hover {
+  color: white;
+  background-color: #4871a9;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#twitter {
+  color: #70bdd3;
+  background-color: white;
+  border: 1px solid #70bdd3;
+  padding: 15px 25px 15px 25px;
+  letter-spacing: 0.05em;
+  font-family: "Gill Sans Std Book", sans-serif;
+  font-size: 13px;
+}
+#twitter:hover {
+  color: white;
+  background-color: #70bdd3;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#hatena {
+  color: #2f9bcd;
+  background-color: white;
+  border: 1px solid #2f9bcd;
+  padding: 15px 25px 15px 25px;
+  letter-spacing: 0.05em;
+  font-family: "Gill Sans Std Book", sans-serif;
+  font-size: 13px;
+}
+#hatena:hover {
+  color: white;
+  background-color: #2f9bcd;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#line {
+  display: none;
+}
+
+#line {
+  color: #8ec09d;
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #8ec09d;
+  padding: 15px 30px 15px 30px;
+  letter-spacing: 0.05em;
+}
+#line:hover {
+  color: white;
+  background-color: #8ec09d;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* share-wrapper_@media開始 */
+@media screen and (max-width: 900px) {
+  #share-wrapper {
+    width: 100%;
+  }
+  .share-container {
+    width: 77%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 780px) {
+  .share-container {
+    width: 87%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .share-container {
+    width: 87%;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 580px) {
+  #share-wrapper {
+    height: 150px;
+  }
+  .share-container {
+    width: 72%;
+    height: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+  }
+  #facebook {
+    width: 200px;
+    margin-left: 0px;
+  }
+  #twitter {
+    width: 200px;
+  }
+  #hatena {
+    width: 200px;
+  }
+  #line {
+    display: block;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #share-wrapper {
+    height: 145px;
+  }
+  .share-container {
+    width: 82%;
+    height: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+  }
+}
+/* share-wrapper_＠media終了 */
+/* share-wrapper終了 */
+/* bottom-wrapper開始 */
+#bottom-wrapper {
+  background-color: #999;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-list {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+}
+
+.footer-list-item {
+  padding: 25px;
+  font-size: 13px;
+  color: white;
+}
+.footer-list-item:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* bottom-wrapper_@media開始 */
+@media screen and (max-width: 580px) {
+  #bottom-wrapper {
+    height: 315px;
+  }
+  .footer-list {
+    display: block;
+    text-align: center;
+    line-height: 12px;
+    width: 100%;
+  }
+  .footer-list-item {
+    border-top: 1px solid white;
+    margin-top: 0px;
+  }
+  .top {
+    border: none;
+    padding-top: 15px;
+  }
+}
+/* bottom-wrapper_@media終了 */
+/* bottom-wrapper終了 */
+#footer-logo img {
+  width: 89px;
+  height: 90px;
+  position: relative;
+  top: 30px;
+  right: 50px;
+}
+#footer-logo img:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#copyright {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#copyright p {
+  font-size: 12px;
+  font-family: "Gill Sans Std Book", sans-serif;
+  font-size: 9.6px;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  background-color: #666;
+  color: white;
+  height: 150px;
+}
+
+.footer-container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 580px) {
+  footer {
+    height: 200px;
+  }
+  .footer-container {
+    height: 200px;
+    display: block;
+  }
+  #footer-logo img {
+    position: relative;
+    top: 40px;
+    left: 245px;
+  }
+  #copyright {
+    position: relative;
+    left: 80px;
+    top: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #footer-logo img {
+    position: relative;
+    top: 30px;
+    left: 205px;
+  }
+  #copyright {
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: 35px;
+  }
+}
+/* footer_@media終了 */
+/* footer終了 */
+/* 検索フォーム */
+.searchform {
+  line-height: 1;
+  position: relative;
+  margin: 2em 0;
+}
+
+.searchfield {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: #efefef;
+}
+
+.searchsubmit {
+  position: absolute;
+  top: 50%;
+  right: 0.75em;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+  color: #000;
+  border: none;
+  background: transparent;
+}
+
+.searchsubmit:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-container {
+  background-color: #999;
+  width: 100%;
+  height: 70px;
+}
+
+.breadcrumbs {
+  text-align: center;
+  
+}
+
+#show-header {
+  background-color: #666;
+}/*# sourceMappingURL=style.css.map */
